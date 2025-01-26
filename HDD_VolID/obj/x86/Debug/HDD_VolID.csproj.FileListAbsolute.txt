@@ -1,0 +1,8 @@
+c:\users\dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\bin\Debug\HDD_VolID.exe
+c:\users\dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\bin\Debug\HDD_VolID.pdb
+c:\users\dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\obj\x86\Debug\HDD_VolID.Form1.resources
+c:\users\dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\obj\x86\Debug\HDD_VolID.Properties.Resources.resources
+c:\users\dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\obj\x86\Debug\HDD_VolID.csproj.GenerateResource.Cache
+c:\users\dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\obj\x86\Debug\HDD_VolID.exe
+c:\users\dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\obj\x86\Debug\HDD_VolID.pdb
+C:\Users\Dori\documents\visual studio 2010\Projects\HDD_VolID\HDD_VolID\obj\x86\Debug\HDD_VolID.csprojResolveAssemblyReference.cache
