@@ -17,6 +17,7 @@ namespace HDD_VolID
         public Form1()
         {
             InitializeComponent();
+            cbodrive.SelectedIndexChanged += cbodrive_SelectedIndexChanged;
         }
         private string GetHDSerialNo(string strDrive)
         {
@@ -63,6 +64,39 @@ namespace HDD_VolID
             if (!File.Exists(volumeIdPath))
             {
                 File.WriteAllBytes(volumeIdPath, Properties.Resources.Volumeid);
+            }
+            // Disable typing in the HWID TextBox, but allow pasting
+            HWID.KeyPress += HWID_KeyPress;
+        }
+        private void HWID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Block typing in the HWID TextBox by suppressing all key presses
+            e.Handled = true;
+        }
+        private void HWID_TextChanged(object sender, EventArgs e)
+        {
+            // Ensure text is always uppercase
+            HWID.Text = HWID.Text.ToUpper();
+
+            string text = HWID.Text;
+            string hexCharacters = "0123456789ABCDEF";
+
+            // Validate only allowed format: XXXX-XXXX
+            if (text.Length > 9)
+            {
+                HWID.Text = text.Substring(0, 9); // Trim extra characters
+                HWID.SelectionStart = HWID.Text.Length; // Keep cursor at the end
+            }
+            else if (text.Length == 9)
+            {
+                if (text[4] != '-' ||
+                    !text.Take(4).All(c => hexCharacters.Contains(c)) ||
+                    !text.Skip(5).All(c => hexCharacters.Contains(c)))
+                {
+                    MessageBox.Show("Invalid format!\nUse only random characters (0-9, A-F) in '1234-ABCD' format.",
+                        "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HWID.Text = GetHDSerialNo(cbodrive.SelectedItem.ToString()).Insert(4, "-"); // Clear invalid input
+                }
             }
         }
         private void GenHWID_Click(object sender, EventArgs e)
