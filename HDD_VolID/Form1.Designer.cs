@@ -73,18 +73,15 @@
             // 
             this.HWID.BackColor = System.Drawing.SystemColors.Window;
             this.HWID.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HWID.Location = new System.Drawing.Point(86, 20);
-            this.HWID.MaxLength = 10;
-            this.HWID.Multiline = true;
+            this.HWID.Location = new System.Drawing.Point(87, 20);
+            this.HWID.MaxLength = 9;
             this.HWID.Name = "HWID";
-            this.HWID.ReadOnly = true;
             this.HWID.Size = new System.Drawing.Size(112, 22);
             this.HWID.TabIndex = 3;
             this.HWID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbodrive
-            //
-            this.cbodrive.SelectedIndexChanged += cbodrive_SelectedIndexChanged;
+            // 
             this.cbodrive.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbodrive.FormattingEnabled = true;
             this.cbodrive.Location = new System.Drawing.Point(16, 20);
